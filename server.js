@@ -16,6 +16,35 @@ app.use(express.json());
 app.use(express.static("./client"));
 
 
+//------------Routes------------\\
+app.get("/users", (req, res) => {
+    sql`SELECT * FROM users`.then((results) => {
+        res.json(results);
+    });
+});
+
+app.get("/users/:id", (req, res) => {
+    const id = req.params.id;
+
+    sql`SELECT * FROM users WHERE ID = ${id}`
+    .then((user) => {
+        if (user !== undefined) {
+            res.json(user[0]);
+        } else {
+            res.status(404);
+            res.set("Content-Type", "text/plain");
+            res.send('User not found, please create an account.');
+        };
+    });
+});
+
+app.post("/users", (req, res) => {
+    const { name } = req.body;
+    sql`INSERT INTO user (name) VALUES (${name}) RETURNING *`.then((result) => {
+        res.json(result);
+        res.send('User account created');
+    });
+});
 
 
 
