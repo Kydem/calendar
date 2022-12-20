@@ -13,7 +13,7 @@ const app = express();
 //translates information into JSON for easy manipulation
 app.use(express.json());
 //Removes the need to have /client appear in the URL
-app.use(express.static("./client"));
+app.use(express.static("/index.html"));
 
 
 //------------Routes------------\\
