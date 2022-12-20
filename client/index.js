@@ -1,7 +1,7 @@
 //------------Dependency Config------------\\
 //day.js is used for the displayed calendar (Helps keep days modular)
 import dayjs from "dayjs";
-import "./styles.css";
+import "./app.css";
 
 
 // Creating var for the days and weeks of the whole year, as well as a year format
