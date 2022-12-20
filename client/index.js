@@ -218,5 +218,4 @@ function initMonthSelectors() {
       });
 };
 
-
 // credit to https://css-tricks.com/how-to-make-a-monthly-calendar-with-real-data/ for the calendar
