@@ -90,3 +90,8 @@
     width: var(--day-label-size);
     height: var(--day-label-size);
   };
+
+  .calendar-day--not-current {
+    background-color: var(--grey-100);
+    color: var(--grey-300);
+  };
