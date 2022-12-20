@@ -3,7 +3,7 @@
 import dayjs from "dayjs";
 import "./styles.css";
 
-
+dayjs().format;
 // Creating var for the days and weeks of the whole year, as well as a year format
 const weekday = require("dayjs/plugin/weekday");
 // sets the initial calander with the current year, month, and week
