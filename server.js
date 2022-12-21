@@ -53,4 +53,4 @@ app.post("/users", (req, res) => {
 
 //------------Server Configuration------------\\
 //Server is running on port declared in the .env file (see .env.template)
-app.listen(process.env.PORT);
+app.listen(3000);
