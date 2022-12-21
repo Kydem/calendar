@@ -220,8 +220,8 @@ function initMonthSelectors() {
 
 // credit to https://css-tricks.com/how-to-make-a-monthly-calendar-with-real-data/ for the calendar
 
-const userDisplay = document.querySelector(".user-display");
-const createUser = document.querySelector("./create-log-in");
+const userDisplay = document.getElementsByClassName("user-display");
+const createUser = document.getElementsByClassName("create-log-in");
 
 
 createUser.addEventListener("submit", (event) => {
