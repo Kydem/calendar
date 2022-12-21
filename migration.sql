@@ -4,7 +4,8 @@ DROP TABLE IF EXISTS user_reminders;
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    name TEXT
+    first_name TEXT
+    last_name TEXT
 );
 
 CREATE TABLE reminders (
@@ -20,6 +21,6 @@ CREATE TABLE user_reminders (
     reminder_id INTEGER REFERENCES reminders(id)
 );
 
-INSERT INTO users (name) VALUES ('Kyle');
+INSERT INTO users (first_name, last_name) VALUES ('Kyle', 'De Martino');
 
 INSERT INTO reminders (date, time, title, content) VALUES ('2022-12-21', '09:00 AM', 'MVP Presentation', 'MVP Calendar Presentation is due at 9 AM on Wednesday, the 21st')

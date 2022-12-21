@@ -219,3 +219,24 @@ function initMonthSelectors() {
 };
 
 // credit to https://css-tricks.com/how-to-make-a-monthly-calendar-with-real-data/ for the calendar
+
+const userDisplay = document.querySelector("./user-display");
+const createUser = document.querySelector(".create-user");
+
+createUser.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const data = new FormData(event.target);
+  const newUser = { first_name: data.get('first_name'), last_name: data.get('calories') };
+  console.log(newUser);
+  fetch("/users", {
+    headers: {
+      "Content-Type": "application/json"
+    },
+    method: 'POST',
+    body: JSON.stringify(newUser)
+  }).then((res) => res.json()).then((user) => {
+    const div = document.createElement("div");
+    div.textContent = `${user.first_name} ${user.last_name}`;
+    userDisplay.append(div);
+  })
+})
