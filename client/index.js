@@ -221,8 +221,9 @@ function initMonthSelectors() {
 // credit to https://css-tricks.com/how-to-make-a-monthly-calendar-with-real-data/ for the calendar
 
 const userDisplay = document.getElementsByClassName("user-display");
-const createUser = document.getElementsByClassName("create-log-in");
+const createUser = document.querySelector(".create-log-in");
 
+let loggedInUser; 
 
 createUser.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -239,6 +240,5 @@ createUser.addEventListener("submit", (event) => {
     const div = document.createElement("div");
     div.textContent = `${user.first_name} ${user.last_name}`;
     userDisplay.append(div);
-    createUser.remove();
   })
 })
