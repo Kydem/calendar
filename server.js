@@ -39,16 +39,12 @@ app.get("/users/:id", (req, res) => {
 });
 
 app.post("/users", (req, res) => {
-    const { name } = req.body;
-    sql`INSERT INTO user (name) VALUES (${name}) RETURNING *`.then((result) => {
+    const { first_name, last_name } = req.body;
+    sql`INSERT INTO user (name) VALUES (${first_name}, ${last_name}) RETURNING *`.then((result) => {
         res.json(result);
         res.send('User account created');
     });
 });
-
-
-
-
 
 
 //------------Server Configuration------------\\

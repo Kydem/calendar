@@ -6,11 +6,11 @@ TODO:
     2) npm install express, postgres, dotenv <--------DONE
     3) .gitignore, .env, .env.template <--------DONE
     4) init commit <--------DONE
-    5) SUDO Code
+    5) SUDO Code <--------DONE
     6) Update readme.md to be functional after product is complete
 
 - Backend
-    1) create a RESTful Express server
+    1) create a RESTful Express server <--------DONE
     2) build table structures with SQL <--------DONE
         A) Users { id SERIAL, name TEXT} <--------DONE
         B) User_Reminders { user_id INTEGER, reminder_id INTEGER } <--------DONE
@@ -25,5 +25,5 @@ TODO:
         B) User Reminders display
         C) User Reminder creation
     2) Write JavaScript to handle the user information and perform calls to the database
-    3) Create display calender and creation sidebar
+    3) Create display calender and creation sidebar <--------DONE
     4) display user reminders on the calender (hopefully on the respective date)

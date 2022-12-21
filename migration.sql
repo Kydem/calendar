@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS user_reminders;
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    first_name TEXT
+    first_name TEXT,
     last_name TEXT
 );
 
