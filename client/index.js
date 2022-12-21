@@ -236,9 +236,14 @@ createUser.addEventListener("submit", (event) => {
     },
     method: 'POST',
     body: JSON.stringify(newUser)
-  }).then((res) => res.json()).then((user) => {
+  })
+  .then((res) => res.json())
+  .then((user) => {
     const div = document.createElement("div");
     div.textContent = `${user.first_name} ${user.last_name}`;
     userDisplay.append(div);
+    loggedInUser = newUser;
   })
 })
+
+userDisplay.textContent(loggedInUser);
